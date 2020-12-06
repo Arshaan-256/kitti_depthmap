@@ -39,3 +39,4 @@ target_link_libraries(utils_lib PRIVATE pybind11::module
 
 configure_file(python/testing.py testing.py)
 configure_file(python/__init__.py __init__.py)
+configure_file(python/3dPoints_to_dense_depth_map.py 3dPoints_to_dense_depth_map.py)

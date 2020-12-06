@@ -32,7 +32,7 @@ def plot_depth(dmap_raw_np, rgb_cv, name="win"):
 # Parameters
 basedir = "kitti"
 date = "2011_09_26"
-drive = "0005"
+drive = "0001"
 # date = "2011_10_03"
 # drive = "0047"
 
@@ -62,7 +62,7 @@ velodata = p_data.get_velo(indx)  # [N x 4] [We could clean up the low intensity
 velodata[:, 3] = 1.
 
 # Large Image Depthmap
-large_img_size = (768/1,256/1)
+large_img_size = (int(768/1),int(256/1))
 uchange = float(large_img_size[0])/float(raw_img_size[0])
 vchange = float(large_img_size[1])/float(raw_img_size[1])
 intr_large = intr_raw.copy()
@@ -75,7 +75,7 @@ dmap_large = pyutils.generate_depth(velodata, intr_large_append, M_velo2cam, lar
 plot_depth(dmap_large, large_img, "large_img")
 
 # Small Image Depthmap
-small_img_size = (768/4,256/4)
+small_img_size = (int(768/4),int(256/4))
 uchange = float(small_img_size[0])/float(raw_img_size[0])
 vchange = float(small_img_size[1])/float(raw_img_size[1])
 intr_small = intr_raw.copy()
@@ -88,7 +88,7 @@ dmap_small = pyutils.generate_depth(velodata, intr_small_append, M_velo2cam, sma
 plot_depth(dmap_small, small_img, "small_img")
 
 # Upsampled
-upsampled_img_size = (768/2,256/2)
+upsampled_img_size = (int(768/2),int(256/2))
 uchange = float(upsampled_img_size[0])/float(raw_img_size[0])
 vchange = float(upsampled_img_size[1])/float(raw_img_size[1])
 intr_upsampled = intr_raw.copy()
@@ -101,7 +101,7 @@ dmap_upsampled = pyutils.generate_depth(velodata, intr_upsampled_append, M_velo2
 plot_depth(dmap_upsampled, upsampled_img, "upsampled_img")
 
 # Uniform Sampling
-uniform_img_size = (768/1,256/1)
+uniform_img_size = (int(768/1),int(256/1))
 uchange = float(uniform_img_size[0])/float(raw_img_size[0])
 vchange = float(uniform_img_size[1])/float(raw_img_size[1])
 intr_uniform = intr_raw.copy()

@@ -14,13 +14,13 @@ python3 testing.py # Change the path in the file to point to the kitti data
 ```
 [1] OpenCV - C++ (Create build folder inside the source directory)
 
-[2] sudo apt-get install libeigen3-dev
-    Could not find a package configuration file provided by "Eigen3" with any of the following names:
-    Eigen3Config.cmake
+[2] sudo apt-get install libeigen3-dev  
+    Could not find a package configuration file provided by "Eigen3" with any of the following names:  
+    Eigen3Config.cmake  
     eigen3-config.cmake
 
-[3] sudo apt-get install libopencv-dev 
-    Install # include <opencv/cxeigen.hpp>
+[3] sudo apt-get install libopencv-dev   
+    Install # include <opencv/cxeigen.hpp>  
 
 ### Large Image
 Accounting for parallax  distortion etc.
